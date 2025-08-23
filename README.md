@@ -115,12 +115,7 @@
 </ul>
 </li>
 <li>
-<a href="#upgrade-from-2x">Upgrade From 2.x</a>
-<ul>
-<li>
-<a href="#deprecated">Deprecated</a>
-</li>
-</ul>
+<a href="#upgrade-from-3x">Upgrade From 3.x</a>
 </li>
 <li>
 <a href="#testing">Testing</a>
@@ -143,7 +138,7 @@ This package provides a phone input component for [Laravel Filament](https://fil
 This package also includes with [Laravel Phone](https://github.com/propaganistas/laravel-phone) package. You can use all the methods of the Laravel Phone package.
 
 > [!NOTE]
-> For **Filament 2.x** use **[1.x](https://github.com/ysfkaya/filament-phone-input/tree/1.x)** branch
+> For **Filament 3.x** use **[3.x](https://github.com/ysfkaya/filament-phone-input/tree/3.x)** branch
 
 ## Installation
 
@@ -675,26 +670,14 @@ You can find the more documentation for the intel tel input [here](https://intl-
 
 - Make sure you have set the [default country](#default-country). If you still receive this error, you can open an issue detailing what you did.
 
-## Upgrade From 2.x
+## Upgrade From 3.x
 
-If you are upgrading from 2.x, you should publish the assets again.
+If you are upgrading from 3.x, you should publish the assets again.
 
 ```bash
 php artisan filament:assets
 php artisan filament-phone-input:install
 ```
-
-### Deprecated
-
-<!-- Diff -->
-
-```diff
-- public function autoInsertDialCode()
-- public function localizedCountries()
-- public function showSelectedDialCode()
-- public function preferredCountries()
-```
-
 <a name="testing"></a>
 
 ## Testing
