@@ -86,7 +86,7 @@ export default function phoneInputFormComponent({
                     return;
                 }
 
-                if(!this.$refs.input){
+                if (!this.$refs.input) {
                     return;
                 }
 
