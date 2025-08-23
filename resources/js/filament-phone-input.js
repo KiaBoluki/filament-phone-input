@@ -86,6 +86,10 @@ export default function phoneInputFormComponent({
                     return;
                 }
 
+                if(!this.$refs.input){
+                    return;
+                }
+
                 this.$refs.input.disabled = event.detail.isDisabled;
 
                 const itiContainer = this.$refs.input.closest(".iti");
