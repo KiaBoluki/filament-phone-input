@@ -150,7 +150,7 @@ This package also includes with [Laravel Phone](https://github.com/propaganistas
 You can install the package via composer:
 
 ```bash
-composer require ysfkaya/filament-phone-input
+composer require ysfkaya/filament-phone-input:^3.0
 ```
 
 Publish the assets:
