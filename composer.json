@@ -30,18 +30,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Ysfkaya\\FilamentPhoneInput\\": "src/"
+            "KiaBoluki\\FilamentPhoneInput\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ysfkaya\\FilamentPhoneInput\\Tests\\": "tests/"
+            "KiaBoluki\\FilamentPhoneInput\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ysfkaya\\FilamentPhoneInput\\FilamentPhoneInputServiceProvider"
+                "KiaBoluki\\FilamentPhoneInput\\FilamentPhoneInputServiceProvider"
             ]
         }
     },
