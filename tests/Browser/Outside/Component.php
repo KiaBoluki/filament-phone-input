@@ -1,13 +1,13 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Browser\Outside;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Browser\Outside;
 
 use Filament\Schemas\Concerns\InteractsWithSchemas;
 use Filament\Schemas\Contracts\HasSchemas;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\View;
 use Livewire\Component as Livewire;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
 
 class Component extends Livewire implements HasSchemas
 {
@@ -29,6 +29,6 @@ class Component extends Livewire implements HasSchemas
 
     public function render()
     {
-        return View::file(__DIR__ . '/view.blade.php');
+        return View::file(__DIR__.'/view.blade.php');
     }
 }

@@ -1,11 +1,16 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Browser;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Browser;
 
 use Laravel\Dusk\Browser;
+<<<<<<< HEAD
 use PHPUnit\Framework\Attributes\Test;
 use Ysfkaya\FilamentPhoneInput\Tests\BrowserTestCase;
 use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
+=======
+use KiaBoluki\FilamentPhoneInput\Tests\BrowserTestCase;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
+>>>>>>> 3.x
 
 class PhoneInputNullStatmentTest extends BrowserTestCase
 {

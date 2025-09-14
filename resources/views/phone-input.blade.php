@@ -22,7 +22,7 @@
     $isLiveDebounced = $isLiveDebounced();
     $liveDebounce = $getLiveDebounce();
 
-    $cssUrl = \Filament\Support\Facades\FilamentAsset::getStyleHref('filament-phone-input', package: 'ysfkaya/filament-phone-input');
+    $cssUrl = \Filament\Support\Facades\FilamentAsset::getStyleHref('filament-phone-input', package: 'KiaBoluki/filament-phone-input');
 
     $compiledCssUrl = Js::from($cssUrl);
 @endphp
@@ -82,7 +82,7 @@
                 @else
                     x-load
                 @endif
-                x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-phone-input', package: 'ysfkaya/filament-phone-input') }}"
+                x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-phone-input', package: 'KiaBoluki/filament-phone-input') }}"
                 x-data="phoneInputFormComponent({
                     options: {
                         allowDropdown: @js($isAllowDropdown()),

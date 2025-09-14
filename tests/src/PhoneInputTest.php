@@ -2,6 +2,7 @@
 
 use libphonenumber\PhoneNumberFormat;
 use libphonenumber\PhoneNumberType;
+<<<<<<< HEAD
 use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
 use Ysfkaya\FilamentPhoneInput\PhoneInputNumberType;
 use Ysfkaya\FilamentPhoneInput\Tables\PhoneColumn;
@@ -10,6 +11,16 @@ use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
 use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUsers\Pages\EditFilamentPhoneInputUser;
 use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUsers\Pages\ListFilamentPhoneInputUsers;
 use Ysfkaya\FilamentPhoneInput\Tests\TestCase;
+=======
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\PhoneInputNumberType;
+use KiaBoluki\FilamentPhoneInput\Tables\PhoneColumn;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUser;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource\Pages\EditUser;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource\Pages\ListUsers;
+use KiaBoluki\FilamentPhoneInput\Tests\TestCase;
+>>>>>>> 3.x
 
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Livewire\livewire;
@@ -51,11 +62,11 @@ it('should be fill the phone input', function ($type) {
     phoneTest(
         fn (PhoneInput $p) => $p->inputNumberFormat(PhoneInputNumberType::from($type))
     )->fillForm([
-        'name' => fake()->name(),
-        'email' => fake()->unique()->safeEmail(),
-        'password' => 'password',
-        'phone' => '+905301111111',
-    ])->call('create')->assertHasNoErrors();
+                'name' => fake()->name(),
+                'email' => fake()->unique()->safeEmail(),
+                'password' => 'password',
+                'phone' => '+905301111111',
+            ])->call('create')->assertHasNoErrors();
 
     assertDatabaseHas(FilamentPhoneInputUser::class, [
         'phone' => match ($type) {
@@ -66,21 +77,21 @@ it('should be fill the phone input', function ($type) {
         },
     ]);
 })->with([
-    PhoneInputNumberType::E164->value,
-    PhoneInputNumberType::INTERNATIONAL->value,
-    PhoneInputNumberType::NATIONAL->value,
-    PhoneInputNumberType::RFC3966->value,
-]);
+            PhoneInputNumberType::E164->value,
+            PhoneInputNumberType::INTERNATIONAL->value,
+            PhoneInputNumberType::NATIONAL->value,
+            PhoneInputNumberType::RFC3966->value,
+        ]);
 
 it('validate for', function (string $country, string $phone, bool $pass, $type = null, $lenient = false) {
     $test = phoneTest(
         fn (PhoneInput $p) => $p->validateFor($country, $type, $lenient)
     )->fillForm([
-        'name' => fake()->name(),
-        'email' => fake()->unique()->safeEmail(),
-        'password' => 'password',
-        'phone' => $phone,
-    ])->call('create');
+                'name' => fake()->name(),
+                'email' => fake()->unique()->safeEmail(),
+                'password' => 'password',
+                'phone' => $phone,
+            ])->call('create');
 
     if ($pass) {
         $test->assertHasNoFormErrors();
@@ -88,22 +99,22 @@ it('validate for', function (string $country, string $phone, bool $pass, $type =
         $test->assertHasFormErrors(['phone']);
     }
 })->with([
-    ['INTERNATIONAL', '+905301111111', true],
-    ['TR', '+18143511527', false],
-    ['TR', '5301111111', true, null, true],
-    ['TR', '+902125111111', true, PhoneNumberType::FIXED_LINE],
-]);
+            ['INTERNATIONAL', '+905301111111', true],
+            ['TR', '+18143511527', false],
+            ['TR', '5301111111', true, null, true],
+            ['TR', '+902125111111', true, PhoneNumberType::FIXED_LINE],
+        ]);
 
 it('can saves the country code to the database', function () {
     phoneTest(
         fn (PhoneInput $p) => $p->countryStatePath('phone_country')
     )->fillForm([
-        'name' => fake()->name(),
-        'email' => fake()->unique()->safeEmail(),
-        'password' => 'password',
-        'phone' => '+905301111111',
-        'phone_country' => 'TR',
-    ])->call('create')->assertHasNoErrors();
+                'name' => fake()->name(),
+                'email' => fake()->unique()->safeEmail(),
+                'password' => 'password',
+                'phone' => '+905301111111',
+                'phone_country' => 'TR',
+            ])->call('create')->assertHasNoErrors();
 
     assertDatabaseHas(FilamentPhoneInputUser::class, [
         'phone' => '0530 111 11 11',
@@ -139,11 +150,11 @@ test('table column formats the phone number', function ($type) {
             }
         );
 })->with([
-    [PhoneInputNumberType::E164->value],
-    [PhoneInputNumberType::INTERNATIONAL->value],
-    [PhoneInputNumberType::NATIONAL->value],
-    [PhoneInputNumberType::RFC3966->value],
-]);
+            [PhoneInputNumberType::E164->value],
+            [PhoneInputNumberType::INTERNATIONAL->value],
+            [PhoneInputNumberType::NATIONAL->value],
+            [PhoneInputNumberType::RFC3966->value],
+        ]);
 
 test('table column formats with country code', function ($type) {
     FilamentPhoneInputUser::create([
@@ -167,11 +178,11 @@ test('table column formats with country code', function ($type) {
             }
         );
 })->with([
-    [PhoneInputNumberType::E164->value],
-    [PhoneInputNumberType::INTERNATIONAL->value],
-    [PhoneInputNumberType::NATIONAL->value],
-    [PhoneInputNumberType::RFC3966->value],
-]);
+            [PhoneInputNumberType::E164->value],
+            [PhoneInputNumberType::INTERNATIONAL->value],
+            [PhoneInputNumberType::NATIONAL->value],
+            [PhoneInputNumberType::RFC3966->value],
+        ]);
 
 it('does not use debugging functions', function () {
     expect(['dd', 'dump', 'var_dump', 'print_r', 'ray'])->not->toBeUsed();

@@ -1,12 +1,12 @@
 # Filament Phone Input
 
-<p align="center"><img src="https://raw.githubusercontent.com/ysfkaya/filament-phone-input/main/screenshots/input.png" alt="Filament Phone Input"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/KiaBoluki/filament-phone-input/main/screenshots/input.png" alt="Filament Phone Input"></p>
 
 <p align="center" class="flex items-center gap-2">
-<a href="https://packagist.org/packages/ysfkaya/filament-phone-input"><img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" style="max-width: 100%"></a>
-<a href="https://github.com/ysfkaya/filament-phone-input/actions?query=workflow%3Arun-tests+branch%3Amain"><img src="https://img.shields.io/github/actions/workflow/status/ysfkaya/filament-phone-input/run-tests.yml?style=for-the-badge&logo=github&label=TESTS" alt="GitHub Tests Action Status" data-canonical-src="https://img.shields.io/github/actions/workflow/status/ysfkaya/filament-phone-input/run-tests.yml?branch=main&amp;label=tests&style=for-the-badge" style="max-width: 100%;"></a>
-<a href="https://packagist.org/packages/ysfkaya/filament-phone-input/stats" rel="nofollow"><img src="https://img.shields.io/packagist/dt/ysfkaya/filament-phone-input.svg?color=rgb(249%20115%2022)&style=for-the-badge" alt="Total Downloads" style="max-width: 100%;"></a>
-<a href="https://packagist.org/packages/ysfkaya/filament-phone-input" rel="nofollow"><img src="https://img.shields.io/packagist/v/ysfkaya/filament-phone-input?style=for-the-badge&logo=packagist&label=Version" style="max-width: 100%;"></a>
+<a href="https://packagist.org/packages/KiaBoluki/filament-phone-input"><img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" style="max-width: 100%"></a>
+<a href="https://github.com/KiaBoluki/filament-phone-input/actions?query=workflow%3Arun-tests+branch%3Amain"><img src="https://img.shields.io/github/actions/workflow/status/KiaBoluki/filament-phone-input/run-tests.yml?style=for-the-badge&logo=github&label=TESTS" alt="GitHub Tests Action Status" data-canonical-src="https://img.shields.io/github/actions/workflow/status/KiaBoluki/filament-phone-input/run-tests.yml?branch=main&amp;label=tests&style=for-the-badge" style="max-width: 100%;"></a>
+<a href="https://packagist.org/packages/KiaBoluki/filament-phone-input/stats" rel="nofollow"><img src="https://img.shields.io/packagist/dt/KiaBoluki/filament-phone-input.svg?color=rgb(249%20115%2022)&style=for-the-badge" alt="Total Downloads" style="max-width: 100%;"></a>
+<a href="https://packagist.org/packages/KiaBoluki/filament-phone-input" rel="nofollow"><img src="https://img.shields.io/packagist/v/KiaBoluki/filament-phone-input?style=for-the-badge&logo=packagist&label=Version" style="max-width: 100%;"></a>
 <a target="_blank" rel="noopener noreferrer nofollow" href="https://filamentphp.com/"><img src="https://img.shields.io/badge/filament-3-rgb(235%2068%2050)?style=for-the-badge&amp;logo=laravel" alt="Filament Version" style="max-width: 100%;"></a>
 <a target="_blank" rel="noopener noreferrer nofollow" href="#"><img src="https://img.shields.io/badge/php-^8.1-rgb(249%20115%2022)?style=for-the-badge&logo=php" alt="PHP Version" style="max-width: 100%;"></a>
 </p>
@@ -138,14 +138,18 @@ This package provides a phone input component for [Laravel Filament](https://fil
 This package also includes with [Laravel Phone](https://github.com/propaganistas/laravel-phone) package. You can use all the methods of the Laravel Phone package.
 
 > [!NOTE]
+<<<<<<< HEAD
 > For **Filament 3.x** use **[3.x](https://github.com/ysfkaya/filament-phone-input/tree/3.x)** branch
+=======
+> For **Filament 2.x** use **[1.x](https://github.com/KiaBoluki/filament-phone-input/tree/1.x)** branch
+>>>>>>> 3.x
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require ysfkaya/filament-phone-input
+composer require KiaBoluki/filament-phone-input:^3.0
 ```
 
 Publish the assets:
@@ -203,12 +207,12 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Infolists;
 use Filament\Infolists\Infolist;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
-use Ysfkaya\FilamentPhoneInput\Tables\PhoneColumn;
-use Ysfkaya\FilamentPhoneInput\Infolists\PhoneEntry;
-use Ysfkaya\FilamentPhoneInput\PhoneInputNumberType;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\Tables\PhoneColumn;
+use KiaBoluki\FilamentPhoneInput\Infolists\PhoneEntry;
+use KiaBoluki\FilamentPhoneInput\PhoneInputNumberType;
 
-  
+
     public static function infolists(Infolist $infolist): Infolist
     {
         return $infolist
@@ -292,7 +296,6 @@ PhoneInput::make('phone')
 > [!NOTE]
 > I think the main source of this problem is that there is no area code in the phone number previously recorded in your database. To fix this, `libphonenumber` expects a default phone number from us. Unfortunately, there is no ability to guess the country by phone number yet.
 
-
 #### Validation
 
 ---
@@ -331,7 +334,7 @@ PhoneInput::make('phone')
     ->displayNumberFormat(PhoneInputNumberType::E164),
 ```
 
-<p align="left"><img src="https://raw.githubusercontent.com/ysfkaya/filament-phone-input/main/screenshots/display-number-format.png" alt="Filament Phone Input"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/KiaBoluki/filament-phone-input/main/screenshots/display-number-format.png" alt="Filament Phone Input"></p>
 
 #### Input Number Format
 
@@ -355,7 +358,7 @@ PhoneInput::make('phone')
     ->focusNumberFormat(PhoneInputNumberType::E164),
 ```
 
-<p align="left"><img src="https://raw.githubusercontent.com/ysfkaya/filament-phone-input/main/screenshots/focus-input-type.gif" alt="Filament Phone Input"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/KiaBoluki/filament-phone-input/main/screenshots/focus-input-type.gif" alt="Filament Phone Input"></p>
 
 #### Disallow Dropdown
 
@@ -368,7 +371,7 @@ PhoneInput::make('phone')
     ->disallowDropdown(),
 ```
 
-<p align="left"><img src="https://raw.githubusercontent.com/ysfkaya/filament-phone-input/main/screenshots/disallowed-dropdown.png" alt="Filament Phone Input"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/KiaBoluki/filament-phone-input/main/screenshots/disallowed-dropdown.png" alt="Filament Phone Input"></p>
 
 #### Hide Flags
 
@@ -450,7 +453,7 @@ PhoneInput::make('phone')
     ->onlyCountries(['tr','us', 'gb']),
 ```
 
-<p align="left"><img src="https://raw.githubusercontent.com/ysfkaya/filament-phone-input/main/screenshots/only-countries.png" alt="Filament Phone Input"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/KiaBoluki/filament-phone-input/main/screenshots/only-countries.png" alt="Filament Phone Input"></p>
 
 #### Format On Display
 
@@ -595,7 +598,7 @@ use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\View;
 use Livewire\Component as Livewire;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
 
 class Component extends Livewire implements HasForms
 {
@@ -668,7 +671,7 @@ You can find the more documentation for the intel tel input [here](https://intl-
 
 ### `Propaganistas\LaravelPhone\Exceptions\NumberParseException` error
 
-- Make sure you have set the [default country](#default-country). If you still receive this error, you can open an issue detailing what you did.
+-   Make sure you have set the [default country](#default-country). If you still receive this error, you can open an issue detailing what you did.
 
 ## Upgrade From 3.x
 
@@ -704,11 +707,11 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## Credits
 
--   [Yusuf Kaya](https://github.com/ysfkaya)
--   [All Contributors](https://github.com/ysfkaya/filament-phone-input/graphs/contributors)
+-   [Yusuf Kaya](https://github.com/KiaBoluki)
+-   [All Contributors](https://github.com/KiaBoluki/filament-phone-input/graphs/contributors)
 
 <a name="license"></a>
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/ysfkaya/filament-phone-input/blob/main/LICENCE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/KiaBoluki/filament-phone-input/blob/main/LICENCE.md) for more information.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput;
+namespace KiaBoluki\FilamentPhoneInput;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Css;
@@ -18,16 +18,16 @@ class FilamentPhoneInputServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command->publishAssets();
-                $command->askToStarRepoOnGitHub('ysfkaya/filament-phone-input');
+                $command->askToStarRepoOnGitHub('KiaBoluki/filament-phone-input');
             });
     }
 
     public function packageBooted(): void
     {
         FilamentAsset::register([
-            Css::make('filament-phone-input', __DIR__ . '/../dist/css/filament-phone-input.css')->loadedOnRequest(),
-            AlpineComponent::make('filament-phone-input', __DIR__ . '/../dist/js/filament-phone-input.js'),
-        ], package: 'ysfkaya/filament-phone-input');
+            Css::make('filament-phone-input', __DIR__.'/../dist/css/filament-phone-input.css')->loadedOnRequest(),
+            AlpineComponent::make('filament-phone-input', __DIR__.'/../dist/js/filament-phone-input.js'),
+        ], package: 'KiaBoluki/filament-phone-input');
 
         $this->publishes([
             $this->package->basePath('/../images/vendor/intl-tel-input/build') => public_path("vendor/{$this->package->shortName()}"),

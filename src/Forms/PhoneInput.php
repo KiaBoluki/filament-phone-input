@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Forms;
+namespace KiaBoluki\FilamentPhoneInput\Forms;
 
 use Closure;
 use Filament\Forms\Components\Concerns\HasAffixes;
@@ -15,7 +15,7 @@ use libphonenumber\PhoneNumberFormat;
 use libphonenumber\PhoneNumberType;
 use Livewire\Attributes\Renderless;
 use Propaganistas\LaravelPhone\Rules\Phone as PhoneRule;
-use Ysfkaya\FilamentPhoneInput\PhoneInputNumberType;
+use KiaBoluki\FilamentPhoneInput\PhoneInputNumberType;
 
 class PhoneInput extends Field implements HasAffixActions
 {
@@ -25,69 +25,69 @@ class PhoneInput extends Field implements HasAffixActions
 
     protected string $view = 'filament-phone-input::phone-input';
 
-    protected string | Closure | PhoneInputNumberType $displayNumberFormat = PhoneInputNumberType::NATIONAL;
+    protected string|Closure|PhoneInputNumberType $displayNumberFormat = PhoneInputNumberType::NATIONAL;
 
-    protected string | Closure | PhoneInputNumberType $inputNumberFormat = PhoneInputNumberType::E164;
+    protected string|Closure|PhoneInputNumberType $inputNumberFormat = PhoneInputNumberType::E164;
 
-    protected string | false | Closure | PhoneInputNumberType $focusNumberFormat = false;
+    protected string|false|Closure|PhoneInputNumberType $focusNumberFormat = false;
 
-    protected string | Closure $placeholderNumberType = 'MOBILE';
+    protected string|Closure $placeholderNumberType = 'MOBILE';
 
-    protected bool | Closure $allowDropdown = true;
+    protected bool|Closure $allowDropdown = true;
 
-    protected string | Closure $autoPlaceholder = 'polite';
+    protected string|Closure $autoPlaceholder = 'polite';
 
-    protected bool | Closure $countrySearch = true;
+    protected bool|Closure $countrySearch = true;
 
-    protected bool | Closure $formatAsYouType = true;
+    protected bool|Closure $formatAsYouType = true;
 
-    protected string | null | Closure $dropdownContainer = null;
+    protected string|null|Closure $dropdownContainer = null;
 
-    protected array | Closure $excludeCountries = [];
+    protected array|Closure $excludeCountries = [];
 
-    protected bool | Closure $formatOnDisplay = true;
+    protected bool|Closure $formatOnDisplay = true;
 
-    protected string | Closure $initialCountry = 'auto';
+    protected string|Closure $initialCountry = 'auto';
 
-    protected string | Closure $containerClass = '';
+    protected string|Closure $containerClass = '';
 
-    protected array | Closure $i18n = [];
+    protected array|Closure $i18n = [];
 
-    protected bool | Closure $nationalMode = true;
+    protected bool|Closure $nationalMode = true;
 
-    protected bool | Closure $fixDropdownWidth = true;
+    protected bool|Closure $fixDropdownWidth = true;
 
-    protected array | Closure $onlyCountries = [];
+    protected array|Closure $onlyCountries = [];
 
-    protected array | null | Closure $countryOrder = null;
+    protected array|null|Closure $countryOrder = null;
 
-    protected string | RawJs | Closure | null $customPlaceholder = null;
+    protected string|RawJs|Closure|null $customPlaceholder = null;
 
-    protected bool | Closure $showFlags = true;
+    protected bool|Closure $showFlags = true;
 
-    protected bool | Closure $separateDialCode = false;
+    protected bool|Closure $separateDialCode = false;
 
-    protected bool | Closure $useFullscreenPopup = false;
+    protected bool|Closure $useFullscreenPopup = false;
 
-    protected bool | Closure $isStrictMode = false;
+    protected bool|Closure $isStrictMode = false;
 
-    protected array | Closure $customOptions = [];
+    protected array|Closure $customOptions = [];
 
-    protected string | Closure $cookieName = 'intlTelInputSelectedCountry';
+    protected string|Closure $cookieName = 'intlTelInputSelectedCountry';
 
     protected ?Closure $ipLookupCallback = null;
 
-    protected bool | Closure $performIpLookup = true;
+    protected bool|Closure $performIpLookup = true;
 
-    protected string | Closure | null $countryStatePath = null;
+    protected string|Closure|null $countryStatePath = null;
 
-    protected string | Closure | null $defaultCountry = null;
+    protected string|Closure|null $defaultCountry = null;
 
     protected bool $countryStatePathIsAbsolute = false;
 
-    protected string | array $validatedCountry = [];
+    protected string|array $validatedCountry = [];
 
-    protected string | Closure | null $locale = null;
+    protected string|Closure|null $locale = null;
 
     protected function setUp(): void
     {
@@ -200,7 +200,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->countryStatePath !== null;
     }
 
-    public function countryStatePath(string | Closure $statePath, bool $isStatePathAbsolute = false): static
+    public function countryStatePath(string|Closure $statePath, bool $isStatePathAbsolute = false): static
     {
         $this->countryStatePath = $statePath;
         $this->countryStatePathIsAbsolute = $isStatePathAbsolute;
@@ -219,7 +219,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->resolveRelativeStatePath((string) $path, $this->countryStatePathIsAbsolute);
     }
 
-    public function validateFor(string | array $country = 'INTERNATIONAL', int | string | array | PhoneNumberType | null $type = null, bool $lenient = false)
+    public function validateFor(string|array $country = 'INTERNATIONAL', int|string|array|PhoneNumberType|null $type = null, bool $lenient = false)
     {
         $this->validatedCountry = $country;
 
@@ -247,7 +247,7 @@ class PhoneInput extends Field implements HasAffixActions
      *
      * @return $this
      */
-    public function defaultCountry(string | Closure $value): static
+    public function defaultCountry(string|Closure $value): static
     {
         $this->defaultCountry = $value;
 
@@ -278,7 +278,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this;
     }
 
-    public function enableIpLookup(bool | Closure $value = true): static
+    public function enableIpLookup(bool|Closure $value = true): static
     {
         $this->performIpLookup = $value;
 
@@ -290,7 +290,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->performIpLookup);
     }
 
-    public function inputNumberFormat(PhoneInputNumberType | Closure $format): static
+    public function inputNumberFormat(PhoneInputNumberType|Closure $format): static
     {
         $this->inputNumberFormat = $format->value;
 
@@ -304,7 +304,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $value instanceof PhoneInputNumberType ? $value->value : $value;
     }
 
-    public function displayNumberFormat(PhoneInputNumberType | Closure $format): static
+    public function displayNumberFormat(PhoneInputNumberType|Closure $format): static
     {
         $this->displayNumberFormat = $format->value;
 
@@ -318,7 +318,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $value instanceof PhoneInputNumberType ? $value->value : $value;
     }
 
-    public function focusNumberFormat(PhoneInputNumberType | false | Closure $format): static
+    public function focusNumberFormat(PhoneInputNumberType|false|Closure $format): static
     {
         if ($format !== false) {
             $format = $format->value;
@@ -329,7 +329,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this;
     }
 
-    public function getFocusNumberFormat(): string | false
+    public function getFocusNumberFormat(): string|false
     {
         $value = $this->evaluate($this->focusNumberFormat);
 
@@ -343,7 +343,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this;
     }
 
-    public function allowDropdown(bool | Closure $value = true): static
+    public function allowDropdown(bool|Closure $value = true): static
     {
         $this->allowDropdown = $value;
 
@@ -355,7 +355,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->allowDropdown);
     }
 
-    public function autoPlaceholder(string | Closure $value): static
+    public function autoPlaceholder(string|Closure $value): static
     {
         $this->autoPlaceholder = $value;
 
@@ -367,7 +367,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->autoPlaceholder);
     }
 
-    public function containerClass(string | Closure $value): static
+    public function containerClass(string|Closure $value): static
     {
         $this->containerClass = $value;
 
@@ -379,7 +379,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->containerClass);
     }
 
-    public function countryOrder(array | Closure | null $value): static
+    public function countryOrder(array|Closure|null $value): static
     {
         $this->countryOrder = $value;
 
@@ -391,7 +391,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->countryOrder);
     }
 
-    public function countrySearch(bool | Closure $value = true): static
+    public function countrySearch(bool|Closure $value = true): static
     {
         $this->countrySearch = $value;
 
@@ -403,7 +403,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->countrySearch);
     }
 
-    public function customPlaceholder(string | RawJs | Closure | null $value): static
+    public function customPlaceholder(string|RawJs|Closure|null $value): static
     {
         $this->customPlaceholder = $value;
 
@@ -415,7 +415,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->customPlaceholder);
     }
 
-    public function dropdownContainer(string | null | Closure $value): static
+    public function dropdownContainer(string|null|Closure $value): static
     {
         $this->dropdownContainer = $value;
 
@@ -427,7 +427,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->dropdownContainer);
     }
 
-    public function excludeCountries(array | Closure $value): static
+    public function excludeCountries(array|Closure $value): static
     {
         $this->excludeCountries = $value;
 
@@ -439,7 +439,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->excludeCountries);
     }
 
-    public function fixDropdownWidth(bool | Closure $value = true): static
+    public function fixDropdownWidth(bool|Closure $value = true): static
     {
         $this->fixDropdownWidth = $value;
 
@@ -451,7 +451,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->fixDropdownWidth);
     }
 
-    public function formatAsYouType(bool | Closure $value = true): static
+    public function formatAsYouType(bool|Closure $value = true): static
     {
         $this->formatAsYouType = $value;
 
@@ -463,7 +463,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->formatAsYouType);
     }
 
-    public function formatOnDisplay(bool | Closure $value = true): static
+    public function formatOnDisplay(bool|Closure $value = true): static
     {
         $this->formatOnDisplay = $value;
 
@@ -475,7 +475,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->formatOnDisplay);
     }
 
-    public function i18n(array | Closure $value): static
+    public function i18n(array|Closure $value): static
     {
         $this->i18n = $value;
 
@@ -487,7 +487,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->i18n);
     }
 
-    public function initialCountry(string | Closure $value): static
+    public function initialCountry(string|Closure $value): static
     {
         $this->initialCountry = $value;
 
@@ -499,7 +499,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->initialCountry);
     }
 
-    public function nationalMode(bool | Closure $value = true): static
+    public function nationalMode(bool|Closure $value = true): static
     {
         $this->nationalMode = $value;
 
@@ -511,7 +511,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->nationalMode);
     }
 
-    public function onlyCountries(array | Closure $value): static
+    public function onlyCountries(array|Closure $value): static
     {
         $this->onlyCountries = $value;
 
@@ -523,7 +523,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->onlyCountries);
     }
 
-    public function placeholderNumberType(string | Closure $value): static
+    public function placeholderNumberType(string|Closure $value): static
     {
         $this->placeholderNumberType = $value;
 
@@ -535,7 +535,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->placeholderNumberType);
     }
 
-    public function showFlags(bool | Closure $value = true): static
+    public function showFlags(bool|Closure $value = true): static
     {
         $this->showFlags = $value;
 
@@ -547,7 +547,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->showFlags);
     }
 
-    public function separateDialCode(bool | Closure $value = true): static
+    public function separateDialCode(bool|Closure $value = true): static
     {
         $this->separateDialCode = $value;
 
@@ -559,7 +559,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->separateDialCode);
     }
 
-    public function useFullscreenPopup(bool | Closure $value = true): static
+    public function useFullscreenPopup(bool|Closure $value = true): static
     {
         $this->useFullscreenPopup = $value;
 
@@ -571,7 +571,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->useFullscreenPopup);
     }
 
-    public function strictMode(bool | Closure $value = true): static
+    public function strictMode(bool|Closure $value = true): static
     {
         $this->isStrictMode = $value;
 
@@ -583,7 +583,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->isStrictMode);
     }
 
-    public function cookieName(string | Closure $value): static
+    public function cookieName(string|Closure $value): static
     {
         $this->cookieName = $value;
 
@@ -595,7 +595,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->cookieName);
     }
 
-    public function locale(string | Closure $value): static
+    public function locale(string|Closure $value): static
     {
         $this->locale = $value;
 
@@ -607,7 +607,7 @@ class PhoneInput extends Field implements HasAffixActions
         return $this->evaluate($this->locale) ?? app()->getLocale();
     }
 
-    public function customOptions(array | Closure $value): static
+    public function customOptions(array|Closure $value): static
     {
         $this->customOptions = $value;
 

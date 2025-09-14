@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests;
+namespace KiaBoluki\FilamentPhoneInput\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
 

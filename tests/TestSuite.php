@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests;
+namespace KiaBoluki\FilamentPhoneInput\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -15,9 +15,9 @@ use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
 use Livewire\LivewireServiceProvider;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Ysfkaya\FilamentPhoneInput\FilamentPhoneInputServiceProvider;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputPanelProvider;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUser;
+use KiaBoluki\FilamentPhoneInput\FilamentPhoneInputServiceProvider;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputPanelProvider;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUser;
 
 trait TestSuite
 {
@@ -51,7 +51,7 @@ trait TestSuite
     protected function defineDatabaseMigrations(): void
     {
         // Test migrations
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
     }
 
     public function getEnvironmentSetUp($app)
