@@ -25,10 +25,10 @@ body:
   - type: markdown
     attributes:
       value: |
-          You can use `composer show` to get package version numbers:
+        You can use `composer show` to get package version numbers:
   - type: input
     attributes:
-      label: "Version of ysfkaya/filament-phone-input package:"
+      label: "Version of KiaBoluki/filament-phone-input package:"
     validations:
       required: true
   - type: input
@@ -36,4 +36,3 @@ body:
       label: "PHP version:"
     validations:
       required: true
-

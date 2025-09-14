@@ -1,13 +1,13 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Browser\Outside;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Browser\Outside;
 
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\View;
 use Livewire\Component as Livewire;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
 
 class Component extends Livewire implements HasForms
 {
@@ -30,6 +30,6 @@ class Component extends Livewire implements HasForms
 
     public function render()
     {
-        return View::file(__DIR__ . '/view.blade.php');
+        return View::file(__DIR__.'/view.blade.php');
     }
 }

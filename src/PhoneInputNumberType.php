@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput;
+namespace KiaBoluki\FilamentPhoneInput;
 
 use libphonenumber\PhoneNumberFormat;
 use Propaganistas\LaravelPhone\PhoneNumber;
@@ -17,7 +17,7 @@ enum PhoneInputNumberType: string
      * does not exist, so we return the integer value directly. It deprecated in the v9
      * and will be removed in the future.
      */
-    public function toLibPhoneNumberFormat(): int | PhoneNumberFormat // @phpstan-ignore-line
+    public function toLibPhoneNumberFormat(): int|PhoneNumberFormat // @phpstan-ignore-line
     {
         $format = match ($this) {
             self::E164 => PhoneNumberFormat::E164,

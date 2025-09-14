@@ -1,11 +1,11 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Browser;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Browser;
 
 use Laravel\Dusk\Browser;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
-use Ysfkaya\FilamentPhoneInput\Tests\BrowserTestCase;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\Tests\BrowserTestCase;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
 
 class PhoneInputStrictModeTest extends BrowserTestCase
 {

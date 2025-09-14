@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Infolists;
+namespace KiaBoluki\FilamentPhoneInput\Infolists;
 
 use Closure;
 use Filament\Infolists\Components\TextEntry;
@@ -10,13 +10,13 @@ use Illuminate\Support\HtmlString;
 use libphonenumber\NumberParseException as libPhoneNumberParseException;
 use libphonenumber\PhoneNumberFormat;
 use Propaganistas\LaravelPhone\Exceptions\NumberParseException;
-use Ysfkaya\FilamentPhoneInput\PhoneInputNumberType;
+use KiaBoluki\FilamentPhoneInput\PhoneInputNumberType;
 
 class PhoneEntry extends TextEntry
 {
-    protected string | Closure | null $countryColumn = null;
+    protected string|Closure|null $countryColumn = null;
 
-    protected string | array | Closure | null $defaultCountry = null;
+    protected string|array|Closure|null $defaultCountry = null;
 
     protected function setUp(): void
     {
@@ -25,7 +25,7 @@ class PhoneEntry extends TextEntry
         $this->displayFormat(PhoneInputNumberType::NATIONAL);
     }
 
-    public function defaultCountry(string | array | Closure $country): static
+    public function defaultCountry(string|array|Closure $country): static
     {
         $this->defaultCountry = $country;
 
@@ -37,7 +37,7 @@ class PhoneEntry extends TextEntry
         return $this->evaluate($this->defaultCountry);
     }
 
-    public function countryColumn(string | Closure $column): static
+    public function countryColumn(string|Closure $column): static
     {
         $this->countryColumn = $column;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Browser;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Browser;
 
 use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Form;
 use Laravel\Dusk\Browser;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
-use Ysfkaya\FilamentPhoneInput\PhoneInputNumberType;
-use Ysfkaya\FilamentPhoneInput\Tests\BrowserTestCase;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\PhoneInputNumberType;
+use KiaBoluki\FilamentPhoneInput\Tests\BrowserTestCase;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource;
 
 class PhoneInputAffixActionsTest extends BrowserTestCase
 {

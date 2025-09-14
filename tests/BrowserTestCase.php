@@ -1,13 +1,13 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests;
+namespace KiaBoluki\FilamentPhoneInput\Tests;
 
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Dusk\Browser;
 use Livewire\Features\SupportTesting\DuskBrowserMacros;
 use Orchestra\Testbench\Dusk\TestCase as Orchestra;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputPanelProvider;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUser;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputPanelProvider;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUser;
 
 class BrowserTestCase extends Orchestra
 {

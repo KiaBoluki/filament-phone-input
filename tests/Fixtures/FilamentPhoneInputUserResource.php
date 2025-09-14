@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Fixtures;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Fixtures;
 
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -8,9 +8,9 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Hash;
-use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
-use Ysfkaya\FilamentPhoneInput\Tables\PhoneColumn;
-use Ysfkaya\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource\Pages;
+use KiaBoluki\FilamentPhoneInput\Forms\PhoneInput;
+use KiaBoluki\FilamentPhoneInput\Tables\PhoneColumn;
+use KiaBoluki\FilamentPhoneInput\Tests\Fixtures\FilamentPhoneInputUserResource\Pages;
 
 class FilamentPhoneInputUserResource extends Resource
 {

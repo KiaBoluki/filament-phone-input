@@ -1,6 +1,6 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Fixtures;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Fixtures;
 
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;

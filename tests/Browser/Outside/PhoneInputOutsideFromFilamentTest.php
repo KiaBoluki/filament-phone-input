@@ -1,10 +1,10 @@
 <?php
 
-namespace Ysfkaya\FilamentPhoneInput\Tests\Browser\Outside;
+namespace KiaBoluki\FilamentPhoneInput\Tests\Browser\Outside;
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Dusk\Browser;
-use Ysfkaya\FilamentPhoneInput\Tests\BrowserTestCase;
+use KiaBoluki\FilamentPhoneInput\Tests\BrowserTestCase;
 
 class PhoneInputOutsideFromFilamentTest extends BrowserTestCase
 {
