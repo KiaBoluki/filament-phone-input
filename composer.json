@@ -7,7 +7,6 @@
         "phone-input",
         "intl-tel-input"
     ],
-    "version": "1.0.0",
     "homepage": "https://github.com/KiaBoluki/filament-phone-input",
     "license": "MIT",
     "require": {
